@@ -1,0 +1,15 @@
+---
+version: ~> 1.0
+
+os: linux
+dist: bionic
+
+language: ruby
+
+install:
+  - sudo apt update --yes
+  - sudo apt install ca-certificates
+  - gem install awesome_bot
+
+script:
+  - awesome_bot README.md --allow-redirect --allow 503 --white-list "creativecommons.org,mvfjfugdwgc5uwho.onion,www.mhprofessional.com,www.derbycon.com,www.zoomeye.org,packetstormsecurity.com,www.shodan.io,www.0day.today"
